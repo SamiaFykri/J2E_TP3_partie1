@@ -1,10 +1,10 @@
-# 🩺 TP J2EE - Partie 1 : Gestion des Patients avec Spring Boot
+# TP J2EE - Partie 1 : Gestion des Patients avec Spring Boot
 
 Ce projet fait partie d’un TP sur Java EE / Spring Boot, avec pour objectif de construire une mini-application de gestion des patients. Il s'agit d'une interface web permettant de lister, rechercher et supprimer des patients à partir d'une base de données MySQL, avec Spring Data JPA et Thymeleaf.
 
 ---
 
-## 📁 Structure du projet
+## Structure du projet
 
 Voici un aperçu des dossiers/fichiers principaux :
 
@@ -22,17 +22,17 @@ src/
 
 ---
 
-## 🧩 Fonctionnalités principales
+## Fonctionnalités principales
 
-- 📋 Affichage paginé de la liste des patients
-- 🔍 Recherche de patients par mot-clé (nom)
-- ❌ Suppression d’un patient
-- 🌐 Interface responsive avec Bootstrap
-- 🛢️ Connexion à une base de données MySQL
+- Affichage paginé de la liste des patients
+- Recherche de patients par mot-clé (nom)
+- Suppression d’un patient
+- Interface responsive avec Bootstrap
+- Connexion à une base de données MySQL
 
 ---
 
-## 🧠 Contrôleur `PatientController.java`
+##  Contrôleur `PatientController.java`
 
 Ce contrôleur gère la logique côté serveur. Il possède deux endpoints :
 
@@ -46,7 +46,7 @@ patientRepository.findByNomContains(keyword, PageRequest.of(page, size));
 
 ---
 
-## 🖥️ Vue `patients.html` (Thymeleaf)
+##  Vue `patients.html` (Thymeleaf)
 
 Il s'agit de la **page principale de l’application**, dans laquelle on retrouve :
 
@@ -66,7 +66,7 @@ Exemple de bloc de pagination :
 
 ---
 
-## ⚙️ Fichier `application.properties`
+## Fichier `application.properties`
 
 Ce fichier configure la base de données, Hibernate et le serveur :
 
@@ -86,7 +86,7 @@ debug=true
 
 ---
 
-## 📦 Dépendances utilisées
+## Dépendances utilisées
 
 Ce projet utilise notamment :
 
@@ -95,19 +95,18 @@ Ce projet utilise notamment :
 - `spring-boot-starter-web` : développement web MVC
 - `mysql-connector-j` : pilote JDBC pour MySQL
 - `webjars/bootstrap` : pour le style via Bootstrap
-- `lombok` : annotations pour simplifier le code Java (ex: @AllArgsConstructor)
+- `lombok` : annotations pour simplifier le code Java 
 
 ---
 
-## 🚀 Lancement de l’application
+## Lancement de l’application
 
-1. Assurez-vous que MySQL tourne en local sur le port 3306.
+1. MySQL tourne en local sur le port 3306.
 2. Le schéma de BDD sera automatiquement créé à la première exécution grâce à `spring.jpa.hibernate.ddl-auto=update`.
-3. Lancez l’application (`main()` dans le fichier principal).
-4. Accédez à l’URL : [http://localhost:8080/index](http://localhost:8080/index)
+3. Accédez à l’URL : [http://localhost:8080/index](http://localhost:8080/index)
 
----
+## Schema de la table patient
+![Capture d'écran 2025-04-14 151141](https://github.com/user-attachments/assets/833a78de-f074-4158-b3f3-fba147639dc4)
 
-## 👨‍🎓 Auteur
-
-Projet réalisé par **Samia Fykri** dans le cadre d’un TP universitaire J2EE - Spring Boot.
+## Execution
+<img width="947" alt="tp3" src="https://github.com/user-attachments/assets/2714c957-3f75-4378-8e31-34d4becf4ec5" />
